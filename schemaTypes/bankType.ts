@@ -77,5 +77,11 @@ export const bankType = defineType({
       ],
       description: 'Currently active transfer bonuses for this bank',
     }),
+    defineField({
+      name: 'description',
+      title: 'Description',
+      type: 'string',
+      description: 'Description on which cards are transferable',
+    }),
   ],
 })
