@@ -52,31 +52,7 @@ export const bankType = defineType({
       ],
       description: 'Airlines and hotels that this bank can transfer points to',
     }),
-    defineField({
-      name: 'currentBonuses',
-      title: 'Current Transfer Bonuses',
-      type: 'array',
-      of: [
-        {
-          type: 'reference',
-          to: [{type: 'transferBonus'}],
-          options: {
-            filter: ({document}) => {
-              // Only show transfer bonuses that are associated with this bank and are currently active based on date
-              const now = new Date().toISOString().split('T')[0] // Current date in YYYY-MM-DD format
-              return {
-                filter: 'bank._ref == $bankId && startDate <= $today && endDate >= $today',
-                params: {
-                  bankId: document._id,
-                  today: now,
-                },
-              }
-            },
-          },
-        },
-      ],
-      description: 'Currently active transfer bonuses for this bank',
-    }),
+
     defineField({
       name: 'description',
       title: 'Description',
