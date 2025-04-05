@@ -39,12 +39,12 @@ export const transferBonusType = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'baseTransferRatio',
-      title: 'Base Transfer Ratio',
+      name: 'calculatedRatio',
+      title: 'Calculated Ratio',
       type: 'string',
-      description: 'The regular transfer ratio without bonus, e.g., "1:1", "1:1.5", "2:1"',
-      validation: (rule) => rule.required(),
+      description: 'The calculated ratio including bonus, e.g., "1:1.2", "1:1.5", "1:3"',
     }),
+
     defineField({
       name: 'details',
       title: 'Details',
