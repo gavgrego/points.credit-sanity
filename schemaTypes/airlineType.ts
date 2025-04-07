@@ -32,6 +32,12 @@ export const airlineType = defineType({
       description: 'IATA code of the airline',
     }),
     defineField({
+      name: 'seatsSource',
+      title: 'Seats Source',
+      type: 'string',
+      description: 'seats.aero Airline',
+    }),
+    defineField({
       name: 'slug',
       type: 'slug',
       options: {source: 'name'},
