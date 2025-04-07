@@ -26,6 +26,12 @@ export const airlineType = defineType({
       description: "Name of airline's loyalty program",
     }),
     defineField({
+      name: 'iataCode',
+      title: 'IATA Code',
+      type: 'string',
+      description: 'IATA code of the airline',
+    }),
+    defineField({
       name: 'slug',
       type: 'slug',
       options: {source: 'name'},
