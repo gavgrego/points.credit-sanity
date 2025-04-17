@@ -76,7 +76,7 @@ export const transferBonusType = defineType({
 
       return {
         title: `${bankName || 'Unknown Bank'} → ${partnerName || 'Unknown Partner'} (${bonusRatio})`,
-        subtitle: `${status} | ${start?.toLocaleDateString() || 'No start'} to ${end?.toLocaleDateString() || 'No end'}`,
+        subtitle: `${status} | ${start || 'No start'} to ${end || 'No end'}`,
       }
     },
   },
