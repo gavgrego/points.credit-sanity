@@ -35,7 +35,42 @@ export const postType = defineType({
     defineField({
       name: 'body',
       type: 'array',
-      of: [{type: 'block'}],
+      of: [
+        {
+          type: 'block',
+        },
+        {
+          type: 'image',
+          fields: [
+            {
+              name: 'size',
+              type: 'string',
+              title: 'Image Size',
+              options: {
+                list: [
+                  {title: 'Full Width (100%)', value: 'full'},
+                  {title: 'Large (75%)', value: 'large'},
+                  {title: 'Medium (50%)', value: 'medium'},
+                ],
+              },
+              initialValue: 'full',
+            },
+            {
+              name: 'alt',
+              type: 'string',
+              title: 'Alternative text',
+              description: 'Important for SEO and accessibility.',
+            },
+          ],
+        },
+      ],
+    }),
+    defineField({
+      name: 'comments',
+      title: 'Comments',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'comment'}}],
+      readOnly: true,
     }),
   ],
 })

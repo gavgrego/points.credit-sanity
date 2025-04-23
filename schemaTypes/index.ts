@@ -4,6 +4,7 @@ import {airlineType} from './airlineType'
 import {hotelType} from './hotelType'
 import {transferBonusType} from './transferBonusType'
 import {categoryType} from './categoryType'
+import {commentType} from './commentType'
 
 export const schemaTypes = [
   postType,
@@ -12,4 +13,5 @@ export const schemaTypes = [
   hotelType,
   transferBonusType,
   categoryType,
+  commentType,
 ]
