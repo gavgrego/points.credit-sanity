@@ -1,6 +1,6 @@
 import {defineField, defineType} from 'sanity'
 
-export const externalResource = defineType({
+export const externalResourceType = defineType({
   name: 'externalResource',
   title: 'External Resource',
   type: 'document',

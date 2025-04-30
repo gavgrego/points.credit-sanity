@@ -5,6 +5,7 @@ import {hotelType} from './hotelType'
 import {transferBonusType} from './transferBonusType'
 import {categoryType} from './categoryType'
 import {commentType} from './commentType'
+import {externalResourceType} from './externalResourceType'
 
 export const schemaTypes = [
   postType,
@@ -14,4 +15,5 @@ export const schemaTypes = [
   transferBonusType,
   categoryType,
   commentType,
+  externalResourceType,
 ]
