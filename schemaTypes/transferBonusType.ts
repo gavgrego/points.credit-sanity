@@ -1,5 +1,5 @@
 import {defineField, defineType} from 'sanity'
-
+import dayjs from 'dayjs'
 export const transferBonusType = defineType({
   name: 'transferBonus',
   title: 'Transfer Bonus',
@@ -67,9 +67,9 @@ export const transferBonusType = defineType({
       endDate: 'endDate',
     },
     prepare({bankName, partnerName, bonusRatio, startDate, endDate}) {
-      const now = new Date()
-      const start = startDate ? new Date(startDate) : null
-      const end = endDate ? new Date(endDate) : null
+      const now = dayjs().format('YYYY-MM-DD')
+      const start = startDate ? dayjs(startDate).format('YYYY-MM-DD') : null
+      const end = endDate ? dayjs(endDate).format('YYYY-MM-DD') : null
 
       const isActive = start && end && now >= start && now <= end
       const status = isActive ? '🟢 Active' : '⚪ Inactive'
